@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <span class="navbar-brand" id="welcome">Gestor de Tareas</span>
+      </div>
+    </nav>
+
+    <div class="container main-container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card form-container">
+            <div class="card-body">
+              <h5 class="card-title">Nueva Tarea</h5>
+              <form id="formTask">
+                <div class="form-group">
+                  <input type="text" id="title" placeholder="Título" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="taskDate">Fecha:</label>
+                  <input type="date" id="taskDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="taskTime">Hora:</label>
+                  <input type="time" id="taskTime" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <textarea id="description" cols="30" rows="3" class="form-control" placeholder="Descripción"></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark btn-block" id="submitTask">Guardar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <div class="card tasks-container">
+            <div class="card-body">
+              <h5 class="card-title">Mis Tareas</h5>
+              <div id="tasks"></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
